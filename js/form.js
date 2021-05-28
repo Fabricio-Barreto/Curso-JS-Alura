@@ -84,3 +84,13 @@ function addPaciente(paciente, Tr) {
 
     tabela.appendChild(Tr.pacienteTr);
 }
+
+var formpaciente = document.querySelectorAll(".paciente");
+
+formpaciente.forEach(function(paciente) {
+    imc = paciente.querySelector(".info-imc");
+    peso = paciente.querySelector(".info-peso");
+    altura = paciente.querySelector(".info-altura");
+
+    imc.textContent = calculaImc(peso.textContent,altura.textContent);
+});
